@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Opening Guide - DinoCard: The Extinction Manual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo">DinoCard</a>
+      <a href="contents.html">Contents</a>
+      <a href="getting-started.html">Basics</a>
+      <a href="battle-system.html">Battle</a>
+      <a href="matchups.html">Matchups</a>
+      <a href="underdog.html">Underdog</a>
+    </nav>
+
+    <div class="chapter-divider">
+      <div class="chapter-number">Chapter VII</div>
+      <div class="chapter-title">Pack Opening Guide</div>
+    </div>
+
+    <div class="content" id="rarity-odds">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Rarity Drop Rates</h2>
+
+      <p>Every pack contains <strong>5 cards</strong>. Each card slot is rolled independently using weighted random selection. Here are the exact drop rates pulled from the game's source code:</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Rarity</th>
+            <th>Weight</th>
+            <th>Drop Rate</th>
+            <th>Avg Cards per 10 Packs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rarity-badge rarity-fossilized">Fossilized</span></td>
+            <td>55</td>
+            <td>55%</td>
+            <td>~27.5</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-excavated">Excavated</span></td>
+            <td>25</td>
+            <td>25%</td>
+            <td>~12.5</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-ancient">Ancient</span></td>
+            <td>12</td>
+            <td>12%</td>
+            <td>~6</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-apex">Apex</span></td>
+            <td>6</td>
+            <td>6%</td>
+            <td>~3</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-extinction">Extinction</span></td>
+            <td>2</td>
+            <td>2%</td>
+            <td>~1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">What This Means In Practice</h3>
+
+      <div class="info-box">
+        <div class="info-box-header">Cards Per Rarity Tier</div>
+        <div class="info-box-content">
+          <p style="text-indent: 0;">Within each rarity tier, the specific dinosaur is chosen uniformly at random:</p>
+          <table class="stats-table" style="margin-top: 8px;">
+            <thead>
+              <tr>
+                <th>Rarity</th>
+                <th>Dinos in Tier</th>
+                <th>Chance per Specific Dino</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="rarity-badge rarity-fossilized">Fossilized</span></td>
+                <td>3</td>
+                <td>55% &divide; 3 = <strong>18.3%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-excavated">Excavated</span></td>
+                <td>3</td>
+                <td>25% &divide; 3 = <strong>8.3%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-ancient">Ancient</span></td>
+                <td>2</td>
+                <td>12% &divide; 2 = <strong>6%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-apex">Apex</span></td>
+                <td>2</td>
+                <td>6% &divide; 2 = <strong>3%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-extinction">Extinction</span></td>
+                <td>1</td>
+                <td>2% &divide; 1 = <strong>2%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        <div class="warn-box-header">The Giganotosaurus Problem</div>
+        <div class="warn-box-content">
+          <p style="text-indent: 0;">With only a <strong>2% chance per card slot</strong> and 5 slots per pack, the probability of getting at least one Giganotosaurus in a single pack is:</p>
+          <code style="display: block; padding: 8px; background: var(--bone-white); border: 1px solid var(--earth-brown); margin: 8px 0;">
+            P = 1 - (0.98)^5 = 1 - 0.9039 = <strong>9.6%</strong>
+          </code>
+          <p style="text-indent: 0;">That's roughly <strong>1 in 10 packs</strong>. On average, you'll need to open about <strong>10-11 packs</strong> to pull a Giganotosaurus. Since you earn 1 pack per battle win, plan on winning at least 10 battles!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="pity-system">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Guaranteed Rarity System</h2>
+
+      <p>DinoCard has a built-in pity mechanic to prevent truly awful pulls. Here's how it works:</p>
+
+      <div class="info-box">
+        <div class="info-box-header">The Pity Rule</div>
+        <div class="info-box-content">
+          <p style="text-indent: 0;">The game checks the first 4 cards in your pack. If <strong>none</strong> of them are <span class="rarity-badge rarity-excavated">Excavated</span> or higher, the 5th card is <strong>guaranteed</strong> to be at least Excavated rarity.</p>
+          <p style="text-indent: 0; margin-top: 8px;">This means: <strong>every pack has at least one uncommon+ card.</strong></p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Pity System Probability</h3>
+
+      <p>What's the chance of the pity system activating? The first 4 cards must ALL be Fossilized:</p>
+
+      <code style="display: block; padding: 12px; background: var(--fossil-tan); border: 2px solid var(--earth-brown); margin: 12px 0; font-size: 14px;">
+        P(all 4 common) = (0.55)^4 = <strong>9.15%</strong>
+      </code>
+
+      <p>So roughly <strong>1 in 11 packs</strong> will trigger the pity system. The other 10+ packs naturally contain at least one uncommon or better card without needing the safety net.</p>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: Pity Card Quality</div>
+        <div class="tip-box-content">
+          When the pity system activates, the 5th card re-rolls its rarity but only from the Excavated+ pool. The relative weights become:
+          <table class="stats-table" style="margin-top: 8px;">
+            <thead>
+              <tr>
+                <th>Rarity</th>
+                <th>Original Weight</th>
+                <th>Pity Adjusted Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="rarity-badge rarity-excavated">Excavated</span></td>
+                <td>25</td>
+                <td>25/45 = <strong>55.6%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-ancient">Ancient</span></td>
+                <td>12</td>
+                <td>12/45 = <strong>26.7%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-apex">Apex</span></td>
+                <td>6</td>
+                <td>6/45 = <strong>13.3%</strong></td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-extinction">Extinction</span></td>
+                <td>2</td>
+                <td>2/45 = <strong>4.4%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 8px; text-indent: 0;">The pity card actually has a <strong>higher chance</strong> of being Ancient or above compared to a normal pull! So a "bad" pack might reward you with a surprise rare.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Collection Completion Estimates</h3>
+
+      <p>How many packs do you need to collect all 11 dinosaurs? Here's a rough estimate based on probability:</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Goal</th>
+            <th>Expected Packs</th>
+            <th>Expected Battle Wins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All 3 Fossilized dinos</td>
+            <td>~3-5</td>
+            <td>~3-5</td>
+          </tr>
+          <tr>
+            <td>All 3 Excavated dinos</td>
+            <td>~5-8</td>
+            <td>~5-8</td>
+          </tr>
+          <tr>
+            <td>Both Ancient dinos</td>
+            <td>~8-12</td>
+            <td>~8-12</td>
+          </tr>
+          <tr>
+            <td>Both Apex dinos</td>
+            <td>~15-25</td>
+            <td>~15-25</td>
+          </tr>
+          <tr>
+            <td>Giganotosaurus</td>
+            <td>~10-15</td>
+            <td>~10-15</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold;">Complete Collection (all 11)</td>
+            <td style="font-weight: bold;">~25-40</td>
+            <td style="font-weight: bold;">~25-40</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: Efficient Pack Grinding</div>
+        <div class="tip-box-content">
+          <p style="text-indent: 0;">The fastest way to complete your collection:</p>
+          <ol style="padding-left: 20px; margin-top: 8px;">
+            <li>Open your initial packs to get some Fossilized cards</li>
+            <li>Battle with your best card to earn more packs</li>
+            <li>As you get stronger cards, switch to battling with them</li>
+            <li>Use Ancient-tier cards for the best win-rate-to-matchmaking ratio</li>
+            <li>Keep opening packs until Giganotosaurus appears!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="cpu-secrets.html">&laquo; CPU Secrets</a>
+      <a href="quick-reference.html">Quick Reference &raquo;</a>
+    </div>
+
+    <div class="page-footer">
+      <span>DinoCard: The Extinction Manual</span>
+      <span class="page-number">19</span>
+    </div>
+  </div>
+</body>
+</html>

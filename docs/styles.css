@@ -1,0 +1,966 @@
+/* ============================================
+   DINOCARD: THE EXTINCTION MANUAL
+   Retro Gen 1 Pokemon Guide Style
+   Fossil Tan & Earth Tones Theme
+   ============================================ */
+
+/* --- CSS Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Fossil Earth Tone Palette */
+  --bone-white: #f5f0e1;
+  --fossil-tan: #d4c5a0;
+  --sand: #c4b078;
+  --earth-brown: #8b7355;
+  --deep-brown: #5c4a32;
+  --dark-soil: #3a2e1e;
+  --jungle-green: #4a7c59;
+  --moss-green: #6b8f5e;
+  --fern-green: #3d6b4f;
+  --amber: #d4942a;
+  --lava-red: #c0392b;
+  --sky-blue: #5b8fa8;
+  --fossil-grey: #9e9685;
+
+  /* Rarity Colors */
+  --rarity-fossilized: #8e8e8e;
+  --rarity-excavated: #5b8fa8;
+  --rarity-ancient: #7b68ae;
+  --rarity-apex: #d4942a;
+  --rarity-extinction: #c0392b;
+
+  /* Type Colors */
+  --type-carnivore: #c0392b;
+  --type-herbivore: #4a7c59;
+
+  /* Layout */
+  --page-max-width: 780px;
+  --border-thick: 4px;
+  --border-thin: 2px;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--dark-soil);
+  color: var(--deep-brown);
+  line-height: 1.5;
+  font-size: 16px;
+  image-rendering: pixelated;
+}
+
+/* --- Page Container --- */
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  background: var(--bone-white);
+  min-height: 100vh;
+  border-left: var(--border-thick) solid var(--earth-brown);
+  border-right: var(--border-thick) solid var(--earth-brown);
+  position: relative;
+}
+
+/* --- Top Navigation Bar --- */
+.nav-bar {
+  background: var(--deep-brown);
+  border-bottom: var(--border-thick) solid var(--earth-brown);
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar a {
+  color: var(--fossil-tan);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border: var(--border-thin) solid transparent;
+}
+
+.nav-bar a:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.nav-logo {
+  font-size: 14px !important;
+  color: var(--amber) !important;
+}
+
+/* --- Retro Border Decorations --- */
+.retro-border {
+  border: var(--border-thick) solid var(--earth-brown);
+  box-shadow:
+    inset 2px 2px 0 var(--sand),
+    inset -2px -2px 0 var(--fossil-grey);
+}
+
+.retro-border-double {
+  border: var(--border-thick) double var(--earth-brown);
+  padding: 4px;
+}
+
+.retro-border-double > * {
+  border: var(--border-thin) solid var(--earth-brown);
+}
+
+/* --- Section Headers --- */
+.section-header {
+  background: var(--deep-brown);
+  color: var(--bone-white);
+  padding: 12px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: var(--border-thick) solid var(--amber);
+  text-align: center;
+}
+
+.section-subheader {
+  background: var(--fossil-tan);
+  color: var(--deep-brown);
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: var(--border-thin) solid var(--earth-brown);
+  border-top: var(--border-thin) solid var(--earth-brown);
+}
+
+/* --- Content Area --- */
+.content {
+  padding: 24px;
+}
+
+.content p {
+  margin-bottom: 16px;
+  text-indent: 2em;
+}
+
+.content p:first-child {
+  text-indent: 0;
+}
+
+/* --- Retro Info Box --- */
+.info-box {
+  border: var(--border-thick) solid var(--earth-brown);
+  margin: 20px 0;
+  background: var(--fossil-tan);
+}
+
+.info-box-header {
+  background: var(--earth-brown);
+  color: var(--bone-white);
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-box-content {
+  padding: 12px;
+}
+
+/* --- Tip Box --- */
+.tip-box {
+  border: var(--border-thick) solid var(--jungle-green);
+  margin: 20px 0;
+  background: #e8f0e4;
+}
+
+.tip-box-header {
+  background: var(--jungle-green);
+  color: var(--bone-white);
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.tip-box-content {
+  padding: 12px;
+}
+
+/* --- Warning Box --- */
+.warn-box {
+  border: var(--border-thick) solid var(--lava-red);
+  margin: 20px 0;
+  background: #f8e8e6;
+}
+
+.warn-box-header {
+  background: var(--lava-red);
+  color: var(--bone-white);
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.warn-box-content {
+  padding: 12px;
+}
+
+/* --- Stats Table --- */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--border-thick) solid var(--earth-brown);
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.stats-table th {
+  background: var(--deep-brown);
+  color: var(--bone-white);
+  padding: 8px 12px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border: var(--border-thin) solid var(--earth-brown);
+}
+
+.stats-table td {
+  padding: 8px 12px;
+  border: var(--border-thin) solid var(--earth-brown);
+  background: var(--bone-white);
+}
+
+.stats-table tr:nth-child(even) td {
+  background: var(--fossil-tan);
+}
+
+.stats-table .stat-high {
+  color: var(--jungle-green);
+  font-weight: bold;
+}
+
+.stats-table .stat-low {
+  color: var(--lava-red);
+  font-weight: bold;
+}
+
+/* --- Stat Bars --- */
+.stat-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.stat-bar-label {
+  width: 50px;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.stat-bar-track {
+  flex: 1;
+  height: 16px;
+  background: var(--fossil-tan);
+  border: var(--border-thin) solid var(--earth-brown);
+  position: relative;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.stat-bar-fill.atk { background: var(--lava-red); }
+.stat-bar-fill.def { background: var(--sky-blue); }
+.stat-bar-fill.hp { background: var(--jungle-green); }
+
+.stat-bar-value {
+  width: 40px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* --- Rarity Badges --- */
+.rarity-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: var(--border-thin) solid;
+  color: var(--bone-white);
+}
+
+.rarity-fossilized { background: var(--rarity-fossilized); border-color: #6e6e6e; }
+.rarity-excavated { background: var(--rarity-excavated); border-color: #4a7a91; }
+.rarity-ancient { background: var(--rarity-ancient); border-color: #6354a0; }
+.rarity-apex { background: var(--rarity-apex); border-color: #b87d1f; }
+.rarity-extinction { background: var(--rarity-extinction); border-color: #a02e22; }
+
+/* --- Type Badges --- */
+.type-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: var(--border-thin) solid;
+  color: var(--bone-white);
+}
+
+.type-carnivore { background: var(--type-carnivore); border-color: #a02e22; }
+.type-herbivore { background: var(--type-herbivore); border-color: #3d6b4f; }
+
+/* --- Dino Profile Card --- */
+.dino-profile {
+  border: var(--border-thick) solid var(--earth-brown);
+  margin: 20px 0;
+}
+
+.dino-profile-header {
+  background: var(--deep-brown);
+  color: var(--bone-white);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dino-profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dino-profile-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.dino-profile-body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+}
+
+.dino-profile-art {
+  background: var(--fossil-tan);
+  border-right: var(--border-thick) solid var(--earth-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.dino-profile-stats {
+  padding: 16px;
+}
+
+.dino-profile-desc {
+  padding: 12px 20px;
+  background: var(--fossil-tan);
+  border-top: var(--border-thick) solid var(--earth-brown);
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* --- Matchup Grid --- */
+.matchup-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  border: var(--border-thick) solid var(--earth-brown);
+}
+
+.matchup-grid th {
+  background: var(--deep-brown);
+  color: var(--bone-white);
+  padding: 6px 4px;
+  text-align: center;
+  border: 1px solid var(--earth-brown);
+  font-size: 10px;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  min-width: 36px;
+  height: 80px;
+}
+
+.matchup-grid th.row-header {
+  writing-mode: horizontal-tb;
+  text-align: left;
+  padding: 6px 8px;
+  min-width: 100px;
+  height: auto;
+}
+
+.matchup-grid td {
+  padding: 4px;
+  text-align: center;
+  border: 1px solid var(--earth-brown);
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.matchup-grid .matchup-easy {
+  background: #d4edda;
+  color: #155724;
+}
+
+.matchup-grid .matchup-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.matchup-grid .matchup-hard {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.matchup-grid .matchup-mirror {
+  background: var(--fossil-tan);
+  color: var(--fossil-grey);
+}
+
+/* --- Cover Page --- */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(90, 70, 40, 0.03) 2px,
+      rgba(90, 70, 40, 0.03) 4px
+    ),
+    linear-gradient(180deg, var(--fossil-tan) 0%, var(--bone-white) 40%, var(--bone-white) 60%, var(--fossil-tan) 100%);
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.cover-border {
+  border: var(--border-thick) solid var(--earth-brown);
+  padding: 8px;
+  margin: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.cover-inner {
+  border: var(--border-thin) solid var(--earth-brown);
+  padding: 40px 20px;
+}
+
+.cover-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--deep-brown);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 0 var(--sand);
+}
+
+.cover-subtitle {
+  font-size: 18px;
+  color: var(--earth-brown);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 24px;
+  border-top: var(--border-thin) solid var(--earth-brown);
+  border-bottom: var(--border-thin) solid var(--earth-brown);
+  padding: 8px 0;
+}
+
+.cover-dino-art {
+  margin: 24px auto;
+}
+
+.cover-tagline {
+  font-size: 14px;
+  color: var(--earth-brown);
+  font-style: italic;
+  margin-top: 16px;
+}
+
+.cover-version {
+  font-size: 11px;
+  color: var(--fossil-grey);
+  margin-top: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Table of Contents --- */
+.toc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.toc-list li {
+  border-bottom: 1px dotted var(--earth-brown);
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toc-list a {
+  color: var(--deep-brown);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toc-list a:hover {
+  color: var(--amber);
+}
+
+.toc-list .toc-chapter {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 16px;
+  border-bottom: var(--border-thin) solid var(--earth-brown);
+}
+
+.toc-list .toc-sub {
+  padding-left: 24px;
+  font-size: 14px;
+}
+
+.toc-page {
+  color: var(--fossil-grey);
+  font-style: italic;
+}
+
+/* --- Page Footer --- */
+.page-footer {
+  background: var(--deep-brown);
+  color: var(--fossil-tan);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  border-top: var(--border-thick) solid var(--earth-brown);
+}
+
+.page-number {
+  font-weight: bold;
+}
+
+/* --- Prev/Next Navigation --- */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: var(--border-thin) solid var(--earth-brown);
+  margin-top: 24px;
+}
+
+.page-nav a {
+  color: var(--deep-brown);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: var(--border-thin) solid var(--earth-brown);
+  background: var(--fossil-tan);
+}
+
+.page-nav a:hover {
+  background: var(--amber);
+  color: var(--bone-white);
+  border-color: var(--deep-brown);
+}
+
+/* --- Pixel Art Base --- */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* --- CSS Pixel Art Dinosaurs --- */
+.dino-pixel {
+  display: grid;
+  gap: 0;
+}
+
+.dino-pixel span {
+  display: block;
+}
+
+/* T-Rex Pixel Art - 16x16 grid */
+.pixel-trex {
+  width: 160px;
+  height: 160px;
+  display: grid;
+  grid-template-columns: repeat(16, 10px);
+  grid-template-rows: repeat(16, 10px);
+  position: relative;
+}
+
+/* Generic pixel grid helper */
+.px { width: 10px; height: 10px; display: block; }
+.px-2 { width: 8px; height: 8px; display: block; }
+
+/* Dino color classes */
+.c-body { background: var(--jungle-green); }
+.c-belly { background: var(--moss-green); }
+.c-dark { background: var(--fern-green); }
+.c-eye { background: var(--bone-white); }
+.c-pupil { background: var(--dark-soil); }
+.c-mouth { background: var(--lava-red); }
+.c-claw { background: var(--bone-white); }
+.c-horn { background: var(--sand); }
+.c-plate { background: var(--amber); }
+.c-frill { background: var(--earth-brown); }
+.c-clear { background: transparent; }
+
+/* Carnivore colors */
+.c-carn-body { background: #8B4513; }
+.c-carn-belly { background: #CD853F; }
+.c-carn-dark { background: #654321; }
+
+/* Herbivore colors */
+.c-herb-body { background: #4a7c59; }
+.c-herb-belly { background: #8fbc8f; }
+.c-herb-dark { background: #2d5a3a; }
+
+/* Water/Spino colors */
+.c-water-body { background: #4682B4; }
+.c-water-belly { background: #87CEEB; }
+.c-water-dark { background: #2c5f85; }
+.c-water-sail { background: #c0392b; }
+
+/* --- Move Icons --- */
+.move-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: var(--border-thin) solid var(--earth-brown);
+  text-align: center;
+  line-height: 32px;
+  font-size: 18px;
+  background: var(--fossil-tan);
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* --- Strategy Flow Diagrams --- */
+.strategy-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  margin: 12px 0;
+  background: var(--fossil-tan);
+  border: var(--border-thin) solid var(--earth-brown);
+  flex-wrap: wrap;
+}
+
+.strategy-step {
+  background: var(--deep-brown);
+  color: var(--bone-white);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.strategy-arrow {
+  color: var(--amber);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* --- Damage Number Highlights --- */
+.dmg-num {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--lava-red);
+}
+
+.dmg-num-green {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--jungle-green);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .dino-profile-body {
+    grid-template-columns: 1fr;
+  }
+
+  .dino-profile-art {
+    border-right: none;
+    border-bottom: var(--border-thick) solid var(--earth-brown);
+    min-height: 150px;
+  }
+
+  .matchup-grid th {
+    font-size: 9px;
+    min-width: 28px;
+  }
+
+  .cover-title {
+    font-size: 28px;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .nav-bar a {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}
+
+/* --- Print Styles --- */
+@media print {
+  .nav-bar, .page-nav {
+    display: none;
+  }
+
+  .page {
+    border: none;
+    max-width: 100%;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+/* --- Underdog Section Styles --- */
+.underdog-matchup {
+  border: var(--border-thick) solid var(--amber);
+  margin: 24px 0;
+  background: var(--bone-white);
+}
+
+.underdog-matchup-header {
+  background: var(--amber);
+  color: var(--bone-white);
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.underdog-vs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  background: var(--fossil-tan);
+  border-bottom: var(--border-thin) solid var(--earth-brown);
+}
+
+.underdog-fighter {
+  text-align: center;
+  font-weight: bold;
+}
+
+.underdog-fighter .fighter-name {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.underdog-fighter .fighter-stats {
+  font-size: 12px;
+  color: var(--fossil-grey);
+}
+
+.vs-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--lava-red);
+}
+
+.underdog-strategy {
+  padding: 16px 20px;
+}
+
+.turn-by-turn {
+  margin: 12px 0;
+}
+
+.turn-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 80px;
+  gap: 4px;
+  padding: 6px 8px;
+  border-bottom: 1px dotted var(--earth-brown);
+  font-size: 13px;
+  align-items: center;
+}
+
+.turn-row:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  background: var(--fossil-tan);
+  border-bottom: var(--border-thin) solid var(--earth-brown);
+}
+
+.turn-num {
+  font-weight: bold;
+  color: var(--amber);
+}
+
+/* --- Energy Dots --- */
+.energy-dots {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.energy-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--earth-brown);
+  display: inline-block;
+}
+
+.energy-dot.filled {
+  background: var(--amber);
+}
+
+.energy-dot.empty {
+  background: var(--fossil-tan);
+}
+
+/* --- Chapter Divider --- */
+.chapter-divider {
+  text-align: center;
+  padding: 32px 20px;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(90, 70, 40, 0.03) 2px,
+      rgba(90, 70, 40, 0.03) 4px
+    ),
+    var(--fossil-tan);
+  border-top: var(--border-thick) solid var(--earth-brown);
+  border-bottom: var(--border-thick) solid var(--earth-brown);
+}
+
+.chapter-number {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--fossil-grey);
+}
+
+.chapter-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--deep-brown);
+  margin-top: 4px;
+}
+
+/* --- Dino nav grid (for contents/index pages) --- */
+.dino-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.dino-grid-card {
+  border: var(--border-thick) solid var(--earth-brown);
+  text-align: center;
+  padding: 12px 8px;
+  background: var(--fossil-tan);
+  text-decoration: none;
+  color: var(--deep-brown);
+  transition: background 0.15s;
+}
+
+.dino-grid-card:hover {
+  background: var(--amber);
+  color: var(--bone-white);
+}
+
+.dino-grid-card .dino-grid-emoji {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dino-grid-card .dino-grid-name {
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Probability Table --- */
+.prob-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--border-thick) solid var(--earth-brown);
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.prob-table th {
+  background: var(--earth-brown);
+  color: var(--bone-white);
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: 1px solid var(--deep-brown);
+}
+
+.prob-table td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid var(--earth-brown);
+}
+
+.prob-table tr:nth-child(even) td {
+  background: rgba(212, 197, 160, 0.3);
+}
+
+.prob-high { font-weight: bold; color: var(--jungle-green); }
+.prob-med { color: var(--amber); }
+.prob-low { color: var(--fossil-grey); }

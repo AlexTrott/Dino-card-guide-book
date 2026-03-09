@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle System - DinoCard: The Extinction Manual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo">DinoCard</a>
+      <a href="contents.html">Contents</a>
+      <a href="getting-started.html">Basics</a>
+      <a href="battle-system.html">Battle</a>
+      <a href="matchups.html">Matchups</a>
+      <a href="underdog.html">Underdog</a>
+    </nav>
+
+    <div class="chapter-divider">
+      <div class="chapter-number">Chapter II</div>
+      <div class="chapter-title">Battle System</div>
+    </div>
+
+    <div class="content" id="moves">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">The Four Moves</h2>
+
+      <p>Every battle turn, both you and the CPU simultaneously choose one of four moves. Each move costs a certain amount of energy from your reserves.</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Move</th>
+            <th>Cost</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="move-icon">&#9876;</span> <strong>Strike</strong></td>
+            <td>
+              <span class="energy-dots">
+                <span class="energy-dot filled"></span>
+              </span>
+              1 Energy
+            </td>
+            <td>Standard attack. Deals damage based on your ATK vs opponent's DEF. Damage is <strong>halved</strong> if the opponent uses Guard.</td>
+          </tr>
+          <tr>
+            <td><span class="move-icon">&#128165;</span> <strong>Power Strike</strong></td>
+            <td>
+              <span class="energy-dots">
+                <span class="energy-dot filled"></span>
+                <span class="energy-dot filled"></span>
+              </span>
+              2 Energy
+            </td>
+            <td>Devastating attack with 1.5x ATK multiplier. <strong>Ignores Guard entirely!</strong> Only slightly reduced by DEF. The most powerful move in the game.</td>
+          </tr>
+          <tr>
+            <td><span class="move-icon">&#128737;</span> <strong>Guard</strong></td>
+            <td>
+              <span class="energy-dots">
+                <span class="energy-dot filled"></span>
+              </span>
+              1 Energy
+            </td>
+            <td>Defensive stance. Deals no damage, but <strong>halves incoming Strike damage</strong>. Does NOT block Power Strike! Costs 1 energy to use.</td>
+          </tr>
+          <tr>
+            <td><span class="move-icon">&#9202;</span> <strong>Hold</strong></td>
+            <td>
+              <span class="energy-dots">
+                <span class="energy-dot empty"></span>
+              </span>
+              0 Energy
+            </td>
+            <td>Do nothing. Deals no damage and provides no defense. But costs nothing &mdash; use this to save energy for a future Power Strike.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: The Core Mind Game</div>
+        <div class="tip-box-content">
+          DinoCard's battle system is like rock-paper-scissors with resource management:
+          <ul style="margin-top: 8px; padding-left: 20px;">
+            <li><strong>Strike</strong> beats Hold (deals damage while opponent wastes a turn)</li>
+            <li><strong>Guard</strong> beats Strike (halves incoming damage)</li>
+            <li><strong>Power Strike</strong> beats Guard (ignores it completely!)</li>
+            <li><strong>Hold</strong> beats Guard (opponent wastes energy while you save)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="energy">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Energy &amp; Reserves</h2>
+
+      <p>Your energy reserve is the lifeblood of battle. Managing it well is the difference between victory and extinction.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Energy Rules</div>
+        <div class="info-box-content">
+          <ul style="padding-left: 20px;">
+            <li><strong>Starting Reserve:</strong> Both fighters begin with <strong>2 energy</strong></li>
+            <li><strong>Maximum Reserve:</strong> Energy caps at <strong>4</strong></li>
+            <li><strong>Regeneration:</strong> You gain <strong>+1 energy</strong> at the end of every turn</li>
+            <li><strong>Spending:</strong> You can only use moves you can afford</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Here's how your energy flows through a typical opening:</p>
+
+      <div class="turn-by-turn">
+        <div class="turn-row">
+          <span>Turn</span>
+          <span>Move</span>
+          <span>Energy Before</span>
+          <span>After</span>
+        </div>
+        <div class="turn-row">
+          <span class="turn-num">1</span>
+          <span>Strike (-1)</span>
+          <span>
+            <span class="energy-dots">
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot empty"></span>
+              <span class="energy-dot empty"></span>
+            </span>
+            2
+          </span>
+          <span>2</span>
+        </div>
+        <div class="turn-row">
+          <span class="turn-num">2</span>
+          <span>Strike (-1)</span>
+          <span>
+            <span class="energy-dots">
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot empty"></span>
+              <span class="energy-dot empty"></span>
+            </span>
+            2
+          </span>
+          <span>2</span>
+        </div>
+        <div class="turn-row">
+          <span class="turn-num">3</span>
+          <span>Hold (0)</span>
+          <span>
+            <span class="energy-dots">
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot empty"></span>
+              <span class="energy-dot empty"></span>
+            </span>
+            2
+          </span>
+          <span>3</span>
+        </div>
+        <div class="turn-row">
+          <span class="turn-num">4</span>
+          <span>Power Strike (-2)</span>
+          <span>
+            <span class="energy-dots">
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot filled"></span>
+              <span class="energy-dot empty"></span>
+            </span>
+            3
+          </span>
+          <span>2</span>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: The Hold-Power Combo</div>
+        <div class="tip-box-content">
+          The most efficient damage pattern is: <strong>Hold &rarr; Power Strike</strong>. Holding saves energy for a devastating Power Strike next turn. This is especially deadly with high-ATK carnivores.
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="damage">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Damage Formulas</h2>
+
+      <p>Understanding exactly how damage is calculated gives you a massive edge. Here are the exact formulas from the game's source code:</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Strike Damage</div>
+        <div class="info-box-content">
+          <code style="font-size: 15px; display: block; padding: 8px; background: var(--bone-white); border: 1px solid var(--earth-brown);">
+            DMG = max(1, ATK &times; 0.8 &minus; DEF &times; 0.3)
+          </code>
+          <p style="margin-top: 8px; text-indent: 0; font-size: 13px;">If the opponent uses <strong>Guard</strong>, the result is halved (rounded down, minimum 1).</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-header">Power Strike Damage</div>
+        <div class="info-box-content">
+          <code style="font-size: 15px; display: block; padding: 8px; background: var(--bone-white); border: 1px solid var(--earth-brown);">
+            DMG = max(1, ATK &times; 1.5 &minus; DEF &times; 0.15)
+          </code>
+          <p style="margin-top: 8px; text-indent: 0; font-size: 13px;"><strong>Guard has NO effect!</strong> Power Strike damage is never reduced by guarding. DEF still matters, but at only 0.15x instead of 0.3x.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-header">Guard &amp; Hold</div>
+        <div class="info-box-content">
+          <code style="font-size: 15px; display: block; padding: 8px; background: var(--bone-white); border: 1px solid var(--earth-brown);">
+            DMG = 0
+          </code>
+          <p style="margin-top: 8px; text-indent: 0; font-size: 13px;">Neither Guard nor Hold deal any damage. Guard's value is purely defensive (halving Strike damage).</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Damage Examples</h3>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Attacker</th>
+            <th>Defender</th>
+            <th>Strike DMG</th>
+            <th>Guarded Strike</th>
+            <th>Power Strike</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Velociraptor (40 ATK)</td>
+            <td>Giganotosaurus (70 DEF)</td>
+            <td class="stat-low">11</td>
+            <td class="stat-low">5</td>
+            <td>49</td>
+          </tr>
+          <tr>
+            <td>T-Rex (95 ATK)</td>
+            <td>Velociraptor (25 DEF)</td>
+            <td class="stat-high">68</td>
+            <td>34</td>
+            <td class="stat-high">138</td>
+          </tr>
+          <tr>
+            <td>Giganotosaurus (110 ATK)</td>
+            <td>Ankylosaurus (70 DEF)</td>
+            <td class="stat-high">67</td>
+            <td>33</td>
+            <td class="stat-high">154</td>
+          </tr>
+          <tr>
+            <td>Iguanodon (20 ATK)</td>
+            <td>Ankylosaurus (70 DEF)</td>
+            <td class="stat-low">1</td>
+            <td class="stat-low">1</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Carnotaurus (75 ATK)</td>
+            <td>Triceratops (65 DEF)</td>
+            <td>40</td>
+            <td>20</td>
+            <td class="stat-high">102</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box">
+        <div class="warn-box-header">Critical Insight: Minimum Damage</div>
+        <div class="warn-box-content">
+          All attacks deal at least <strong>1 damage</strong>, even if the formula would produce 0 or negative. This means even the weakest dinosaur can eventually wear down the strongest &mdash; it just takes a LOT of turns. This is crucial for underdog strategies (see Chapter V).
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="winning">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Victory Conditions</h2>
+
+      <p>A battle ends when either fighter's HP reaches <strong>0</strong>. The survivor wins!</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Victory Rewards</div>
+        <div class="info-box-content">
+          <p style="text-indent: 0;">Winning a battle awards you <strong>+1 Pack</strong>. This is the primary way to earn new packs after your initial supply runs out.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-header">CPU Matchmaking</div>
+        <div class="info-box-content">
+          <p style="text-indent: 0;">The CPU picks an opponent within <strong>&plusmn;1 rarity tier</strong> of your selected dinosaur. This means:</p>
+          <table class="stats-table" style="margin-top: 8px;">
+            <thead>
+              <tr>
+                <th>Your Card's Rarity</th>
+                <th>Possible CPU Rarity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="rarity-badge rarity-fossilized">Fossilized</span></td>
+                <td>Fossilized or Excavated</td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-excavated">Excavated</span></td>
+                <td>Fossilized, Excavated, or Ancient</td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-ancient">Ancient</span></td>
+                <td>Excavated, Ancient, or Apex</td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-apex">Apex</span></td>
+                <td>Ancient, Apex, or Extinction</td>
+              </tr>
+              <tr>
+                <td><span class="rarity-badge rarity-extinction">Extinction</span></td>
+                <td>Apex or Extinction</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: Easy Wins</div>
+        <div class="tip-box-content">
+          Since matchmaking is random within the rarity range, you can sometimes face a lower-rarity opponent. Picking an <span class="rarity-badge rarity-ancient">Ancient</span> card gives you a chance to face an Excavated opponent &mdash; a much easier fight for grinding packs!
+        </div>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="getting-started.html">&laquo; Getting Started</a>
+      <a href="dinos/velociraptor.html">Dinosaur Profiles &raquo;</a>
+    </div>
+
+    <div class="page-footer">
+      <span>DinoCard: The Extinction Manual</span>
+      <span class="page-number">3</span>
+    </div>
+  </div>
+</body>
+</html>

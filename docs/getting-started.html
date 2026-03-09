@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started - DinoCard: The Extinction Manual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo">DinoCard</a>
+      <a href="contents.html">Contents</a>
+      <a href="getting-started.html">Basics</a>
+      <a href="battle-system.html">Battle</a>
+      <a href="matchups.html">Matchups</a>
+      <a href="underdog.html">Underdog</a>
+    </nav>
+
+    <div class="chapter-divider">
+      <div class="chapter-number">Chapter I</div>
+      <div class="chapter-title">Getting Started</div>
+    </div>
+
+    <div class="content" id="overview">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Game Overview</h2>
+
+      <p>Welcome, young Paleontologist! DinoCard is a dinosaur card collecting and battling game where you open packs, build a collection, and battle your prehistoric champions against CPU opponents. Your goal: collect all 11 dinosaurs and master the art of combat.</p>
+
+      <p>The game has three core modes, accessible from the main navigation:</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Open Packs</div>
+        <div class="info-box-content">
+          Spend your packs to receive 5 random dinosaur cards. Every pack is guaranteed at least one Excavated (uncommon) or higher rarity card. Win battles to earn more packs!
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-header">Collection</div>
+        <div class="info-box-content">
+          View all dinosaurs you've collected. Cards show their name, type, rarity, stats, and how many copies you own. Build toward the complete set of all 11 dinosaurs!
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-header">Battle</div>
+        <div class="info-box-content">
+          Select one of your owned dinosaurs and face off against a CPU opponent. The CPU picks a dinosaur within one rarity tier of yours. Win to earn a free pack! See Chapter II for full battle details.
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="opening-packs">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Opening Packs</h2>
+
+      <p>Each pack contains exactly <strong>5 cards</strong>. Cards are drawn randomly based on rarity weights:</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Rarity</th>
+            <th>Drop Rate</th>
+            <th>Cards in Tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rarity-badge rarity-fossilized">Fossilized</span></td>
+            <td>55%</td>
+            <td>3 (Velociraptor, Iguanodon, Stegosaurus)</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-excavated">Excavated</span></td>
+            <td>25%</td>
+            <td>3 (Ankylosaurus, Dilophosaurus, Parasaurolophus)</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-ancient">Ancient</span></td>
+            <td>12%</td>
+            <td>2 (Triceratops, Carnotaurus)</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-apex">Apex</span></td>
+            <td>6%</td>
+            <td>2 (Spinosaurus, T-Rex)</td>
+          </tr>
+          <tr>
+            <td><span class="rarity-badge rarity-extinction">Extinction</span></td>
+            <td>2%</td>
+            <td>1 (Giganotosaurus)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: Pity System</div>
+        <div class="tip-box-content">
+          The 5th card in every pack is guaranteed to be at least <span class="rarity-badge rarity-excavated">Excavated</span> rarity if none of the first 4 cards were uncommon or better. You'll never open a pack of all commons!
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="building-collection">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Building Your Collection</h2>
+
+      <p>There are <strong>11 dinosaurs</strong> to collect across 5 rarity tiers. Your collection persists between sessions thanks to local storage.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Earning Packs</div>
+        <div class="info-box-content">
+          <p style="text-indent: 0;">You start with a set of packs, and earn 1 additional pack every time you win a battle. This is the core gameplay loop:</p>
+          <div class="strategy-flow" style="margin-top: 8px;">
+            <span class="strategy-step">Open Packs</span>
+            <span class="strategy-arrow">&rarr;</span>
+            <span class="strategy-step">Get Cards</span>
+            <span class="strategy-arrow">&rarr;</span>
+            <span class="strategy-step">Battle</span>
+            <span class="strategy-arrow">&rarr;</span>
+            <span class="strategy-step">Win Pack</span>
+            <span class="strategy-arrow">&rarr;</span>
+            <span class="strategy-step">Repeat!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">Trainer Tip: Barcode Scanner</div>
+        <div class="tip-box-content">
+          The battle mode includes a barcode scanner feature! Scan any barcode to summon a specific enemy dinosaur using seeded randomization. The same barcode always produces the same opponent &mdash; great for practicing specific matchups.
+        </div>
+      </div>
+
+      <h3 style="margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Dinosaur Types</h3>
+
+      <p>Every dinosaur belongs to one of two types. While there are no type advantages in battle damage calculations, types affect playstyle:</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0;">
+        <div class="info-box" style="margin: 0;">
+          <div class="info-box-header" style="background: var(--type-carnivore);">Carnivore</div>
+          <div class="info-box-content">
+            <p style="text-indent: 0;"><strong>High Attack, Lower Defense</strong></p>
+            <p style="text-indent: 0; font-size: 13px;">Glass cannons. Carnivores hit hard but can't take as many hits. Best used aggressively with Strike and Power Strike.</p>
+          </div>
+        </div>
+        <div class="info-box" style="margin: 0;">
+          <div class="info-box-header" style="background: var(--type-herbivore);">Herbivore</div>
+          <div class="info-box-content">
+            <p style="text-indent: 0;"><strong>High Defense, Higher HP</strong></p>
+            <p style="text-indent: 0; font-size: 13px;">Tanks. Herbivores absorb damage and outlast opponents. Best used with Guard and well-timed Power Strikes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        <div class="warn-box-header">Important Note</div>
+        <div class="warn-box-content">
+          There are no type advantages or weaknesses in DinoCard's damage formula. Carnivore vs. Herbivore doesn't change damage. What matters is the raw ATK, DEF, and HP stats &mdash; and your move choices!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-nav">
+      <a href="contents.html">&laquo; Contents</a>
+      <a href="battle-system.html">Battle System &raquo;</a>
+    </div>
+
+    <div class="page-footer">
+      <span>DinoCard: The Extinction Manual</span>
+      <span class="page-number">1</span>
+    </div>
+  </div>
+</body>
+</html>
