@@ -19,19 +19,17 @@
   </nav>
 
   <div class="chapter-divider">
-    <span>Chapter III</span>
-    <h2>Dinosaur Profiles</h2>
+    <div class="chapter-number">Chapter III</div>
+    <div class="chapter-title">Dinosaur Profiles</div>
   </div>
 
-  <div class="section-header">
-    <h2>Stegosaurus</h2>
-  </div>
+  <div class="section-header">Stegosaurus</div>
 
   <div class="dino-profile">
     <div class="dino-profile-header">
       <h3>Stegosaurus</h3>
-      <span class="badge rarity-fossilized">Fossilized (Common)</span>
-      <span class="badge type-herbivore">Herbivore</span>
+      <span class="rarity-badge rarity-fossilized">Fossilized</span>
+      <span class="type-badge type-herbivore">Herbivore</span>
     </div>
 
     <div class="dino-profile-body">
@@ -82,18 +80,9 @@
       </div>
 
       <div class="dino-profile-stats">
-        <div class="stat-row">
-          <span class="stat-label">ATK</span>
-          <div class="stat-bar"><div class="stat-fill atk" style="width: 27%;">30</div></div>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">DEF</span>
-          <div class="stat-bar"><div class="stat-fill def" style="width: 71%;">50</div></div>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">HP</span>
-          <div class="stat-bar"><div class="stat-fill hp" style="width: 47%;">70</div></div>
-        </div>
+        <div class="stat-bar-container"><span class="stat-bar-label">ATK</span><div class="stat-bar-track"><div class="stat-bar-fill atk" style="width: 27%;"></div></div><span class="stat-bar-value">30</span></div>
+        <div class="stat-bar-container"><span class="stat-bar-label">DEF</span><div class="stat-bar-track"><div class="stat-bar-fill def" style="width: 71%;"></div></div><span class="stat-bar-value">50</span></div>
+        <div class="stat-bar-container"><span class="stat-bar-label">HP</span><div class="stat-bar-track"><div class="stat-bar-fill hp" style="width: 47%;"></div></div><span class="stat-bar-value">70</span></div>
       </div>
     </div>
 
@@ -103,9 +92,11 @@
   </div>
 
   <div class="info-box">
-    <h3>Battle Strategy</h3>
+    <div class="info-box-header">Battle Strategy</div>
+    <div class="info-box-content">
     <p>The best-balanced common. 50 DEF is the highest at Fossilized tier and even competitive with Excavated dinos. Strike = max(1, 24&minus;DEF&times;0.3), Power Strike = max(1, 45&minus;DEF&times;0.15).</p>
     <p>Against Velociraptor (25 DEF): Strike = 16, Power Strike = 41. Has better offensive output than Iguanodon while maintaining strong defense.</p>
+    </div>
   </div>
 
   <div class="tip-box">
