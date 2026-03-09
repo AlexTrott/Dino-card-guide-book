@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David vs. Goliath - DinoCard: The Extinction Manual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo">DinoCard</a>
+      <a href="contents.html">Contents</a>
+      <a href="getting-started.html">Basics</a>
+      <a href="battle-system.html">Battle</a>
+      <a href="matchups.html">Matchups</a>
+      <a href="underdog.html">Underdog</a>
+    </nav>
+
+    <div class="chapter-divider">
+      <div class="chapter-number">Chapter V</div>
+      <div class="chapter-title">David vs. Goliath</div>
+    </div>
+
+    <div class="content">
+      <p>Think you can't win with a common card? Think again. This chapter reveals the exact strategies to topple titans with the tiniest fighters. Every matchup here is possible thanks to DinoCard's energy system and the power of well-timed Power Strikes.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">How to Read This Chapter</div>
+        <div class="info-box-content">
+          Each matchup below includes full damage calculations, a difficulty rating, an honest win-rate estimate, and a &ldquo;dream scenario&rdquo; turn-by-turn breakdown showing the best possible outcome. Remember: underdog wins require favorable CPU behavior &mdash; they are never guaranteed.
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- MATCHUP 1: Velociraptor vs Giganotosaurus -->
+    <!-- ============================== -->
+    <div class="content" id="velociraptor-vs-giganotosaurus">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Matchup 1</h2>
+
+      <div class="underdog-matchup">
+        <div class="underdog-matchup-header">Velociraptor vs Giganotosaurus &mdash; The Impossible Dream</div>
+
+        <div class="underdog-vs">
+          <div class="underdog-fighter">
+            <div class="fighter-name">Velociraptor</div>
+            <div class="fighter-stats">ATK 40 &middot; DEF 25 &middot; HP 60</div>
+          </div>
+          <div class="vs-text">VS</div>
+          <div class="underdog-fighter">
+            <div class="fighter-name">Giganotosaurus</div>
+            <div class="fighter-stats">ATK 110 &middot; DEF 70 &middot; HP 150</div>
+          </div>
+        </div>
+
+        <div class="underdog-strategy">
+          <p style="text-indent: 0;"><strong>Difficulty:</strong> <span class="dmg-num">EXTREME</span></p>
+          <p style="text-indent: 0;"><strong>Estimated Win Rate:</strong> <span class="dmg-num">&lt;5%</span></p>
+
+          <div class="info-box">
+            <div class="info-box-header">Damage Breakdown</div>
+            <div class="info-box-content">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Damage</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Velociraptor Strike vs Giga</td>
+                    <td>11</td>
+                    <td>max(1, 32 &minus; 21)</td>
+                  </tr>
+                  <tr>
+                    <td>Velociraptor Power Strike vs Giga</td>
+                    <td class="stat-high">49</td>
+                    <td>max(1, 60 &minus; 10.5)</td>
+                  </tr>
+                  <tr>
+                    <td>Giga Strike vs Velociraptor</td>
+                    <td class="stat-low">80</td>
+                    <td>ONE-SHOTS! (80 &gt; 60 HP)</td>
+                  </tr>
+                  <tr>
+                    <td>Giga Power Strike vs Velociraptor</td>
+                    <td class="stat-low">161</td>
+                    <td>MEGA one-shot</td>
+                  </tr>
+                  <tr>
+                    <td>Giga Strike vs Velociraptor (guarded)</td>
+                    <td>40</td>
+                    <td>Survivable, but barely</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="warn-box">
+            <div class="warn-box-header">The Hard Truth</div>
+            <div class="warn-box-content">
+              Giganotosaurus one-shots Velociraptor with a single unguarded Strike (80 damage vs 60 HP). You <strong>must</strong> Guard every single turn Giga might Strike. Your only meaningful damage comes from Power Strikes dealing 49 each. You need <strong>4 Power Strikes</strong> to win (4 &times; 49 = 196 &gt; 150). This requires perfect prediction of when Giga will Hold versus Strike &mdash; and an extraordinary amount of luck.
+            </div>
+          </div>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Key Strategy</h3>
+
+          <p style="text-indent: 0;">The entire strategy revolves around exploiting CPU AI energy patterns (covered in detail in Chapter VI):</p>
+          <ul style="padding-left: 24px; margin: 12px 0;">
+            <li><strong>When Giga has 2+ energy</strong>, it favors Strike or Power Strike &mdash; you MUST Guard.</li>
+            <li><strong>When Giga just used Power Strike and has 0&ndash;1 energy</strong>, it must Hold to recharge &mdash; this is your window to Power Strike.</li>
+            <li><strong>Guard when Giga has reserves. Power Strike when Giga is holding.</strong></li>
+          </ul>
+
+          <p>The problem: even one misprediction kills you. A single unguarded Strike ends the run instantly. This is the hardest underdog matchup in the entire game.</p>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Dream Scenario (Everything Goes Right)</h3>
+
+          <div class="turn-by-turn">
+            <div class="turn-row">
+              <span>Turn</span>
+              <span>Your Move</span>
+              <span>Giga's Move</span>
+              <span>Result</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">1</span>
+              <span>Guard (E: 2&rarr;2)</span>
+              <span>Strike</span>
+              <span>Take 40 dmg. HP: 20</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">2</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold (recharging)</span>
+              <span>Deal 49. Giga HP: 101</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">3</span>
+              <span>Guard (E: 1&rarr;1)</span>
+              <span>Strike</span>
+              <span>Take 40 dmg. HP: &minus;20. DEAD.</span>
+            </div>
+          </div>
+
+          <div class="warn-box">
+            <div class="warn-box-header">Even the Dream Fails</div>
+            <div class="warn-box-content">
+              <p style="text-indent: 0;">The math is merciless. Even guarding Giga's Strikes, you take 40 damage each time. With 60 HP, you can only survive <strong>one</strong> guarded Strike before you're in lethal range. To land 4 Power Strikes, Giga would need to use Hold or Guard on at least 4 separate turns &mdash; and you'd need to Guard every single one of Giga's attacks without error.</p>
+              <p>Here is the absolute miracle scenario, requiring Giga to Hold <strong>four turns in a row</strong>:</p>
+            </div>
+          </div>
+
+          <div class="turn-by-turn">
+            <div class="turn-row">
+              <span>Turn</span>
+              <span>Your Move</span>
+              <span>Giga's Move</span>
+              <span>Result</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">1</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 49. Giga HP: 101</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">2</span>
+              <span>Hold (E: 1&rarr;2)</span>
+              <span>Hold</span>
+              <span>No damage. Saving energy.</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">3</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Guard</span>
+              <span>Deal 49. Giga HP: 52</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">4</span>
+              <span>Hold (E: 1&rarr;2)</span>
+              <span>Hold</span>
+              <span>No damage. Saving energy.</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">5</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Guard</span>
+              <span>Deal 49. Giga HP: 3</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">6</span>
+              <span>Strike (E: 1&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 11. Giga HP: 0. WIN!</span>
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <div class="tip-box-header">Reality Check</div>
+            <div class="tip-box-content">
+              This miracle scenario requires Giga to never Strike or Power Strike for 6 straight turns. The CPU AI will almost certainly attack within the first 2 turns. If you attempt this matchup, treat every win as a badge of honor &mdash; and every loss as the expected outcome.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- MATCHUP 2: Dilophosaurus vs T-Rex -->
+    <!-- ============================== -->
+    <div class="content" id="dilophosaurus-vs-trex">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Matchup 2</h2>
+
+      <div class="underdog-matchup">
+        <div class="underdog-matchup-header">Dilophosaurus vs T-Rex &mdash; Venom vs Might</div>
+
+        <div class="underdog-vs">
+          <div class="underdog-fighter">
+            <div class="fighter-name">Dilophosaurus</div>
+            <div class="fighter-stats">ATK 55 &middot; DEF 30 &middot; HP 65</div>
+          </div>
+          <div class="vs-text">VS</div>
+          <div class="underdog-fighter">
+            <div class="fighter-name">T-Rex</div>
+            <div class="fighter-stats">ATK 95 &middot; DEF 60 &middot; HP 130</div>
+          </div>
+        </div>
+
+        <div class="underdog-strategy">
+          <p style="text-indent: 0;"><strong>Difficulty:</strong> <span class="dmg-num">VERY HARD</span></p>
+          <p style="text-indent: 0;"><strong>Estimated Win Rate:</strong> <span class="dmg-num">~15%</span></p>
+
+          <div class="info-box">
+            <div class="info-box-header">Damage Breakdown</div>
+            <div class="info-box-content">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Damage</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dilo Strike vs T-Rex</td>
+                    <td>26</td>
+                    <td>max(1, 44 &minus; 18)</td>
+                  </tr>
+                  <tr>
+                    <td>Dilo Power Strike vs T-Rex</td>
+                    <td class="stat-high">73</td>
+                    <td>max(1, 82.5 &minus; 9)</td>
+                  </tr>
+                  <tr>
+                    <td>T-Rex Strike vs Dilo</td>
+                    <td class="stat-low">67</td>
+                    <td>Nearly one-shots! (67 vs 65 HP)</td>
+                  </tr>
+                  <tr>
+                    <td>T-Rex Power Strike vs Dilo</td>
+                    <td class="stat-low">138</td>
+                    <td>Massive one-shot</td>
+                  </tr>
+                  <tr>
+                    <td>T-Rex Strike vs Dilo (guarded)</td>
+                    <td>33</td>
+                    <td>Survivable</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <div class="tip-box-header">The Silver Lining</div>
+            <div class="tip-box-content">
+              Dilophosaurus's Power Strike does a massive <strong>73 damage</strong>. Two Power Strikes deal 146 &mdash; more than enough to topple T-Rex's 130 HP. You can <strong>two-shot the king of dinosaurs</strong>. The catch? T-Rex nearly one-shots you with a plain Strike (67 vs your 65 HP). One unguarded hit and it's over.
+            </div>
+          </div>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">The Game Plan</h3>
+
+          <p style="text-indent: 0;">You need exactly two Power Strikes to win. The challenge is surviving long enough to land both while managing your energy. Here's the painful reality of each possible opening:</p>
+
+          <div class="info-box">
+            <div class="info-box-header">The Dilemma</div>
+            <div class="info-box-content">
+              <p style="text-indent: 0;"><strong>Path A &mdash; Guard first:</strong> Guard Turn 1 (take 33 guarded, HP 32). Now you're at 32 HP with 2 energy. You can Power Strike Turn 2 for 73 damage &mdash; but if T-Rex Strikes, you take 67 and die at &minus;35 HP.</p>
+              <p style="text-indent: 0;"><strong>Path B &mdash; Power Strike first:</strong> Power Strike Turn 1, deal 73 (T-Rex HP: 57). But if T-Rex Strikes, you take 67 and die immediately.</p>
+              <p style="text-indent: 0;">Either path requires T-Rex to <strong>not Strike</strong> on a critical turn. This is why the win rate is only ~15%.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Win Condition</h3>
+
+          <p style="text-indent: 0;">T-Rex must use a non-Strike action (Hold, Guard, or be mid-Power-Strike setup) on Turns 2 and 3 of the optimal sequence. You Guard the first attack, then go all-in with Power Strikes while praying T-Rex pauses.</p>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Dream Scenario</h3>
+
+          <div class="turn-by-turn">
+            <div class="turn-row">
+              <span>Turn</span>
+              <span>Your Move</span>
+              <span>T-Rex's Move</span>
+              <span>Result</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">1</span>
+              <span>Guard (E: 2&rarr;2)</span>
+              <span>Strike</span>
+              <span>Take 33 dmg. HP: 32</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">2</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 73. T-Rex HP: 57</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">3</span>
+              <span>Hold (E: 1&rarr;2)</span>
+              <span>Guard</span>
+              <span>No damage. Building energy.</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">4</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 73. T-Rex HP: 0. WIN!</span>
+            </div>
+          </div>
+
+          <div class="warn-box">
+            <div class="warn-box-header">Critical Vulnerability</div>
+            <div class="warn-box-content">
+              After Guarding Turn 1, you sit at 32 HP. A single T-Rex Strike on Turn 2, 3, or 4 kills you (67 &gt; 32). Even a guarded Strike (33) would leave you at &minus;1 HP on Turn 3 or 4. Once you take that first guarded hit, you are living on borrowed time with zero margin for error. T-Rex must choose Hold or Guard on Turns 2, 3, and 4 for you to survive.
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <div class="tip-box-header">Trainer Tip: The YOLO Open</div>
+            <div class="tip-box-content">
+              Some players skip the Guard and open with Power Strike on Turn 1. If T-Rex also Holds or Guards, you deal 73 immediately and only need one more Power Strike. It's riskier on Turn 1 (instant death if T-Rex Strikes) but reduces the total turns you need to survive. High risk, high reward &mdash; fitting for a David vs. Goliath fight.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- MATCHUP 3: Stegosaurus vs Spinosaurus -->
+    <!-- ============================== -->
+    <div class="content" id="stegosaurus-vs-spinosaurus">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">Matchup 3</h2>
+
+      <div class="underdog-matchup">
+        <div class="underdog-matchup-header">Stegosaurus vs Spinosaurus &mdash; Plates vs Sail</div>
+
+        <div class="underdog-vs">
+          <div class="underdog-fighter">
+            <div class="fighter-name">Stegosaurus</div>
+            <div class="fighter-stats">ATK 30 &middot; DEF 50 &middot; HP 70</div>
+          </div>
+          <div class="vs-text">VS</div>
+          <div class="underdog-fighter">
+            <div class="fighter-name">Spinosaurus</div>
+            <div class="fighter-stats">ATK 85 &middot; DEF 55 &middot; HP 120</div>
+          </div>
+        </div>
+
+        <div class="underdog-strategy">
+          <p style="text-indent: 0;"><strong>Difficulty:</strong> <span class="dmg-num">HARD</span></p>
+          <p style="text-indent: 0;"><strong>Estimated Win Rate:</strong> <span class="dmg-num">~15%</span></p>
+
+          <div class="info-box">
+            <div class="info-box-header">Damage Breakdown</div>
+            <div class="info-box-content">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Damage</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Stego Strike vs Spino</td>
+                    <td class="stat-low">7</td>
+                    <td>max(1, 24 &minus; 16.5) &mdash; nearly useless</td>
+                  </tr>
+                  <tr>
+                    <td>Stego Power Strike vs Spino</td>
+                    <td class="stat-high">36</td>
+                    <td>max(1, 45 &minus; 8.25)</td>
+                  </tr>
+                  <tr>
+                    <td>Spino Strike vs Stego</td>
+                    <td class="stat-low">53</td>
+                    <td>Huge, but not a one-shot</td>
+                  </tr>
+                  <tr>
+                    <td>Spino Power Strike vs Stego</td>
+                    <td class="stat-low">120</td>
+                    <td>One-shots (120 &gt; 70 HP)</td>
+                  </tr>
+                  <tr>
+                    <td>Spino Strike vs Stego (guarded)</td>
+                    <td>26</td>
+                    <td>Very manageable</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <div class="tip-box-header">Why This Matchup Has Hope</div>
+            <div class="tip-box-content">
+              Unlike the previous matchups, Stegosaurus's 50 DEF actually matters. Spino's Strike deals 53 &mdash; painful, but not lethal from full HP. Guarding reduces it to just 26. With 70 HP, you can survive two guarded Strikes (52 total). Your Power Strike does 36 damage, meaning you need <strong>4 Power Strikes</strong> to win (4 &times; 36 = 144 &gt; 120). It's a war of attrition.
+            </div>
+          </div>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">The Problem</h3>
+
+          <p style="text-indent: 0;">You can survive two guarded Strikes (26 + 26 = 52, leaving you at 18 HP), but the moment Spino lands one unguarded Strike (53), you're likely dead. And you need to find windows for <strong>four</strong> Power Strikes across approximately 8 turns. That's a long time to stay alive.</p>
+
+          <div class="warn-box">
+            <div class="warn-box-header">Spino's Power Strike is Instant Death</div>
+            <div class="warn-box-content">
+              Spino's Power Strike deals 120 damage &mdash; more than your full 70 HP. Guard does NOT reduce Power Strike damage. If Spino uses Power Strike on any turn, you die unless you happened to Strike or Power Strike and finish Spino off first. Watch Spino's energy: if it has 2+ energy and hasn't attacked recently, a Power Strike may be coming.
+            </div>
+          </div>
+
+          <h3 style="margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--earth-brown); padding-bottom: 8px;">Dream Scenario</h3>
+
+          <p style="text-indent: 0;">This requires Spino to Guard or Hold at critical moments, giving you openings for Power Strikes while you soak hits with Guard on the dangerous turns.</p>
+
+          <div class="turn-by-turn">
+            <div class="turn-row">
+              <span>Turn</span>
+              <span>Your Move</span>
+              <span>Spino's Move</span>
+              <span>Result</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">1</span>
+              <span>Guard (E: 2&rarr;2)</span>
+              <span>Strike</span>
+              <span>Take 26 dmg. HP: 44</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">2</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 36. Spino HP: 84</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">3</span>
+              <span>Guard (E: 1&rarr;1)</span>
+              <span>Strike</span>
+              <span>Take 26 dmg. HP: 18</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">4</span>
+              <span>Power Strike (E: 1&rarr;0)</span>
+              <span>Guard</span>
+              <span>Deal 36. Spino HP: 48</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">5</span>
+              <span>Hold (E: 0&rarr;1)</span>
+              <span>Hold</span>
+              <span>No damage. Building energy.</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">6</span>
+              <span>Hold (E: 1&rarr;2)</span>
+              <span>Guard</span>
+              <span>No damage. Energy ready.</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">7</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 36. Spino HP: 12</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">8</span>
+              <span>Hold (E: 1&rarr;2)</span>
+              <span>Guard</span>
+              <span>No damage. One more push.</span>
+            </div>
+            <div class="turn-row">
+              <span class="turn-num">9</span>
+              <span>Power Strike (E: 2&rarr;1)</span>
+              <span>Hold</span>
+              <span>Deal 36. Spino HP: 0. WIN!</span>
+            </div>
+          </div>
+
+          <div class="warn-box">
+            <div class="warn-box-header">Reality Check</div>
+            <div class="warn-box-content">
+              This dream scenario requires Spino to Strike only on turns you Guard, and to Hold or Guard on turns you Power Strike. After Turn 3 you're at 18 HP &mdash; a single unguarded Spino Strike (53 damage) or any Power Strike (120 damage) kills you instantly. Spino must avoid attacking for <strong>six of nine turns</strong>. The CPU AI rarely cooperates this much. Expect to lose this fight the vast majority of the time.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- GENERAL UNDERDOG TIPS -->
+    <!-- ============================== -->
+    <div class="content" id="general-tips">
+      <h2 class="section-subheader" style="margin: -24px -24px 20px -24px;">General Underdog Tips</h2>
+
+      <div class="info-box">
+        <div class="info-box-header">Five Rules for Fighting Above Your Weight</div>
+        <div class="info-box-content">
+          <ol style="padding-left: 24px; line-height: 2;">
+            <li><strong>Guard is your best friend.</strong> It halves Strike damage and costs only 1 energy. When in doubt, Guard. A halved hit is always better than a full one.</li>
+            <li><strong>Power Strike is your only meaningful damage.</strong> Against high-DEF opponents, regular Strikes deal single-digit damage. Power Strikes bypass most of their defense and are the only way to deal real damage in underdog fights.</li>
+            <li><strong>Watch the CPU's energy.</strong> If the opponent has 0&ndash;1 energy, it cannot use Power Strike. That makes Guard less valuable (since you only need to fear a regular Strike or nothing). Use these turns to Hold and bank energy.</li>
+            <li><strong>Hold when the opponent Guards.</strong> If you suspect the CPU will Guard, don't waste energy on a Strike that gets halved. Hold instead, save your energy, and set up a devastating Power Strike next turn.</li>
+            <li><strong>Accept that underdog wins require favorable CPU behavior.</strong> These are not guaranteed strategies. They are optimized plans that give you the best <em>possible</em> chance, but that chance is still slim. Celebrate every underdog victory &mdash; you earned it.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">The Underdog Mindset</div>
+        <div class="tip-box-content">
+          The best underdog players don't get frustrated by losses. They study the CPU's patterns (Chapter VI), learn to predict Hold windows, and strike with surgical precision. Even a 5% win rate means you'll get that legendary victory every 20 attempts. The story of that one time your Velociraptor felled a Giganotosaurus? That's what DinoCard memories are made of.
+        </div>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="matchups.html">&laquo; Matchups</a>
+      <a href="cpu-secrets.html">CPU Secrets &raquo;</a>
+    </div>
+
+    <div class="page-footer">
+      <span>DinoCard: The Extinction Manual</span>
+      <span class="page-number">6</span>
+    </div>
+  </div>
+</body>
+</html>
